@@ -19,3 +19,6 @@
 - [layer弹出层组件](http://layer.layui.com/)
 - [swiper轮播图组件](http://www.swiper.com.cn/)
 - [jQloader静态模块化加载器](https://moerj.github.io/jQloader/)
+
+## 入口页面
+/pages/index.html

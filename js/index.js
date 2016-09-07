@@ -29,6 +29,9 @@ $(function () {
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
 
+            // 自动切换的时间间隔，毫秒
+            autoplay : 5000,
+
             // 如果需要滚动条
             // scrollbar: '.swiper-scrollbar',
         })
