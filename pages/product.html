@@ -1,0 +1,78 @@
+<!--产品展示列表页面-->
+
+<div class="product">
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../images/demo2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/demo3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/demo.jpg" alt="">
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <div class="tabs con">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#tab-1" role="tab" data-toggle="tab">笔记本</a></li>
+            <li role="presentation"><a href="#tab-2" role="tab" data-toggle="tab">台式机</a></li>
+            <li role="presentation"><a href="#tab-3" role="tab" data-toggle="tab">系统</a></li>
+            <li role="presentation"><a href="#tab-4" role="tab" data-toggle="tab">硬件</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="row tab-pane active" id="tab-1"></div>
+            <div role="tabpanel" class="row tab-pane" id="tab-2"></div>
+            <div role="tabpanel" class="row tab-pane" id="tab-3"></div>
+            <div role="tabpanel" class="row tab-pane" id="tab-4"></div>
+        </div>
+    </div>
+
+    <div id="tpl-product" style="display: none;">
+        <div class="col-md-3">
+            <a class="item" href="#">
+                <div class="img">
+                    <img src="../images/demo.jpg">
+                </div>
+                <p class="title">xxx电脑</p>
+                <span class="content">xxx电脑介绍</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // 初始化轮播图
+    new Swiper('.swiper-container', {
+        // direction: 'vertical',
+        loop: true,
+
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+
+        // 如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+
+        // 如果需要滚动条
+        // scrollbar: '.swiper-scrollbar',
+    })
+</script>

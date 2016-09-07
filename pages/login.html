@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>电脑商城</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+
+<body>
+
+    <jq-include src="./header.html"></jq-include>
+
+    <div class="login-page">
+        <form>
+            <div class="container">
+
+                <div class="box login">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="username">用户名</label>
+                            <input type="email" class="form-control" id="username" placeholder="输入邮箱" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <input type="password" class="form-control" id="password" placeholder="4-12位字符或数字" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">验证码</label>
+                            <input type="password" class="form-control short" id="register-repassword" placeholder="" />
+                            <img src="../images/code.jpg" alt="验证码" class="code" />
+                        </div>
+                        <button id="btn-login" type="button" class="btn btn-block btn-primary">登录</button>
+                        <a id="to-register" href="javascript:" class="fbtn">注册</a>
+                    </form>
+                </div>
+                <div class="box register" style="display: none;">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="username">邮箱</label>
+                            <input type="email" class="form-control" id="register-email" placeholder="注册邮箱" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <input type="password" class="form-control" id="register-password" placeholder="4-12位字符或数字" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">再次输入密码</label>
+                            <input type="password" class="form-control" id="register-repassword" placeholder="再次输入密码" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">验证码</label>
+                            <input type="password" class="form-control short" id="register-repassword" placeholder="" />
+                            <img src="../images/code.jpg" alt="验证码" class="code" />
+                        </div>
+                        <button id="btn-register" type="button" class="btn btn-block btn-primary">注册</button>
+                        <a id="to-login" href="javascript:" class="fbtn">返回</a>
+                    </form>
+                </div>
+            </div>
+        <form>
+    </div>
+
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/jQloader.js"></script>
+
+    <script>
+        (function() {
+            $('#to-register').click(function() {
+                $('.login').hide();
+                $('.register').show();
+            })
+            $('#to-login').click(function() {
+                $('.login').show();
+                $('.register').hide();
+            })
+        })()
+    </script>
+
+</body>
+
+</html>
