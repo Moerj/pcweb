@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/layer/skin/layer.css">
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+
+<body>
+
+    <!--header-->
+    <jq-include src="./header.html"></jq-include>
+
+    <div class="control product con">
+        <h3 class="con-title">产品管理</h3>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#tab-1" role="tab" data-toggle="tab">笔记本</a></li>
+            <li role="presentation"><a href="#tab-2" role="tab" data-toggle="tab">台式机</a></li>
+            <li role="presentation"><a href="#tab-3" role="tab" data-toggle="tab">系统</a></li>
+            <li role="presentation"><a href="#tab-4" role="tab" data-toggle="tab">硬件</a></li>
+            <li role="presentation" class="pull-right"><a id="add-page" href="javascript:" role="tab" data-toggle="tab"><i class="fa fa-plus-circle" aria-hidden="true"></i> 新增</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="row tab-pane active" id="tab-1"></div>
+            <div role="tabpanel" class="row tab-pane" id="tab-2"></div>
+            <div role="tabpanel" class="row tab-pane" id="tab-3"></div>
+            <div role="tabpanel" class="row tab-pane" id="tab-4"></div>
+        </div>
+    </div>
+
+    <div id="tpl-product" style="display: none;">
+        <div class="col-md-3 list-item">
+            <a class="item" href="#">
+                <div class="img">
+                    <img src="../images/demo.jpg">
+                </div>
+                <p class="title">xxx电脑</p>
+                <span class="content">xxx电脑介绍</span>
+                <div class="btn-group btn-control">
+                    <button type="button" class="btn btn-default btn-sm edit">编辑</button>
+                    <button type="button" class="btn btn-default btn-sm delete">删除</button>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <!--新增文章的模板-->
+    <form class="addPage" id="addPage" style="display:none;padding:20px;">
+        <h3>新增内容</h3>
+        <div class="form-group">
+            <label for="ptitle">文章标题</label>
+            <input type="text" class="form-control" id="ptitle" placeholder="输入文章的标题">
+        </div>
+
+        <label>文章内容</label>
+        <textarea class="form-control" rows="3"></textarea>
+
+        <label>选择分类</label>
+        <select class="form-control">
+            <option value="1">笔记本</option>
+            <option value="2">台式机</option>
+            <option value="3">系统</option>
+            <option value="4">硬件</option>
+        </select>
+    </form>
+
+    <!--修改文章的模板-->
+    <form role="form" id="editPage" style="display: none;padding:20px;">
+        <div class="form-group">
+            <label for="ptitle">文章标题</label>
+            <input type="text" class="form-control title" id="ptitle" placeholder="输入文章的标题">
+        </div>
+
+        <label>文章内容</label>
+        <textarea class="form-control content" rows="3"></textarea>
+    </form>
+
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/bootstrap.min.js"></script>
+    <script src="../lib/layer/layer.js"></script>
+    <script src="../lib/jQloader.js"></script>
+
+    <!--页面逻辑-->
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>
