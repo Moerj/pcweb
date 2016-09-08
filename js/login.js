@@ -27,11 +27,15 @@
             invaild = true
             msg = '请输入用户名'
         }
-        if ($loginPassword.val().length < 4 || $loginPassword.val().length > 12) {
+        else if ($loginPassword.val()=='') {
             invaild = true
-            msg = '密码不合法'
+            msg = '请输入密码'
         }
-        if ($loginCode.val() == '') {
+        else if ($loginPassword.val().length < 4 || $loginPassword.val().length > 12) {
+            invaild = true
+            msg = '密码需是：'+$loginPassword.attr('placeholder')
+        }
+        else if ($loginCode.val() == '') {
             invaild = true
             msg = '请输入验证码'
         }
@@ -52,15 +56,19 @@
             invaild = true
             msg = '请输入用户名'
         }
-        if ($registerPassword.val().length < 4 || $registerPassword.val().length > 12) {
+        else if ($registerPassword.val()=='') {
             invaild = true
-            msg = '密码不合法'
+            msg = '请输入密码'
         }
-        if ($registerRepassword.val() != $registerPassword.val()) {
+        else if ($registerPassword.val().length < 4 || $registerPassword.val().length > 12) {
+            invaild = true
+            msg = '密码需是：'+$registerPassword.attr('placeholder')
+        }
+        else if ($registerRepassword.val() != $registerPassword.val()) {
             invaild = true
             msg = '两次输入密码不一致'
         }
-        if ($registerCode.val() == '') {
+        else if ($registerCode.val() == '') {
             invaild = true
             msg = '请输入验证码'
         }
