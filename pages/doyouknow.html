@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>科普</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/layer/skin/layer.css">
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+
+<body>
+
+    <!--header-->
+    <jq-include src="./header.html"></jq-include>
+
+
+    <div class="doyouknow con">
+
+        <div class="tabs con">
+            <h3 class="con-title">知识科普</h3>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#tab-1" role="tab" data-toggle="tab">处理器</a></li>
+                <li role="presentation"><a href="#tab-2" role="tab" data-toggle="tab">内存</a></li>
+                <li role="presentation"><a href="#tab-3" role="tab" data-toggle="tab">显卡</a></li>
+                <li role="presentation"><a href="#tab-4" role="tab" data-toggle="tab">硬盘</a></li>
+                <li role="presentation"><a href="#tab-5" role="tab" data-toggle="tab">显示器</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="row tab-pane active" id="tab-1"></div>
+                <div role="tabpanel" class="row tab-pane" id="tab-2"></div>
+                <div role="tabpanel" class="row tab-pane" id="tab-3"></div>
+                <div role="tabpanel" class="row tab-pane" id="tab-4"></div>
+                <div role="tabpanel" class="row tab-pane" id="tab-5"></div>
+            </div>
+
+            <!--分页-->
+            <nav class="page">
+
+                <!--页码后台动态生成-->
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+
+                <!--页统计信息后台动态生成-->
+                <label class="page-info"> 共 <i>2</i> 页</label>
+
+                <div class="input-group">
+                    <input type="number" class="form-control" placeholder="跳转页">
+                    <span class="input-group-btn">
+                <button class="btn btn-default" type="button" >Go!</button>
+                 </span>
+                </div>
+
+            </nav>
+
+        </div>
+
+        <div id="tpl-doyouknow" style="display: none;">
+            <div class="col-md-3">
+                <a class="item" href="./details/01.html">
+                    <div class="img">
+                        <img src="../images/demo.jpg">
+                    </div>
+                    <p class="title">xxx电脑</p>
+                    <span class="content">xxx电脑介绍</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/bootstrap.min.js"></script>
+    <script src="../lib/layer/layer.js"></script>
+    <script src="../lib/jQloader.js"></script>
+    <script src="../js/doyouknow.js"></script>
+
+</body>
+
+</html>
