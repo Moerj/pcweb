@@ -26,6 +26,13 @@ input[type="number"] {
 .tab-pane {
   padding-top: 20px;
 }
+.dialog-reply {
+  padding-top: 20px;
+}
+.dialog-reply textarea {
+  width: 550px;
+  height: 200px;
+}
 .page {
   height: 34px;
   margin: 10px 0;
@@ -240,10 +247,6 @@ input[type="number"] {
   height: 220px;
   display: block;
   margin-bottom: 10px;
-}
-.talk .dialog-reply textarea {
-  width: 550px;
-  height: 200px;
 }
 .control .btn-control {
   display: block;

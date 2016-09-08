@@ -9,6 +9,7 @@
 	<title>详细页</title>
 	<link rel="stylesheet" href="../../lib/bootstrap.min.css">
 	<link rel="stylesheet" href="../../lib/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="../../lib/layer/skin/layer.css">
 	<link rel="stylesheet" href="../../css/base.css">
 	<link rel="stylesheet" href="../../css/news.css">
 </head>
@@ -245,7 +246,7 @@
 				</table>
 			</div>
 		</div>
-		<div role="tabpanel" class="row tab-pane talk con" id="tab-tucao">
+		<div role="tabpanel" class="row tab-pane talk con" style="width: 90%;" id="tab-tucao">
 			<!--贴吧内容展示区域-->
 			<div class="panel panel-default talk-1">
 				<div class="panel-heading">大家的吐槽</div>
@@ -263,6 +264,9 @@
 						<div class="right">
 							tmd一点也不好用，那么小，不好用不好用不好用~！
 						</div>
+						<div class="reply">
+							<a href="javascript:;">回复</a>
+						</div>
 					</div>
 					<div class="list">
 						<!--用户信息-->
@@ -276,6 +280,9 @@
 						<div class="right">
 							送给老公的礼物，老公很喜欢，晚上就好好疼爱我了一番...
 						</div>
+						<div class="reply">
+							<a href="javascript:;">回复</a>
+						</div>
 					</div>
 					<div class="list">
 						<!--用户信息-->
@@ -288,6 +295,9 @@
 						<!--评论内容-->
 						<div class="right">
 							5星好评
+						</div>
+						<div class="reply">
+							<a href="javascript:;">回复</a>
 						</div>
 					</div>
 				</div>
@@ -306,11 +316,17 @@
 		</div>
 	</div>
 
+	<!--回复评论，弹出层内容-->
+	<div id="dialog-reply" class="dialog-reply container" style="display: none;">
+		<textarea rows="3" ></textarea>
+	</div>
+
 </body>
 
 <script src="../../lib/jquery.min.js"></script>
 <script src="../../lib/bootstrap.min.js"></script>
 <script src="../../lib/swiper-3.3.1.jquery.min.js"></script>
+<script src="../../lib/layer/layer.js"></script>
 <script src="../../js/details.js"></script>
 
 </html>
