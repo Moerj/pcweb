@@ -56,7 +56,7 @@
     </div>
 
     <!--新增文章的模板-->
-    <form class="addPage" id="addPage" style="display:none;padding:20px;">
+    <form class="dialog" id="addPage" style="display:none;padding:20px;">
         <h3>新增内容</h3>
         <div class="form-group">
             <label for="ptitle">文章标题</label>
@@ -65,6 +65,12 @@
 
         <label>文章内容</label>
         <textarea class="form-control" rows="3"></textarea>
+
+        <label>图片上传</label>
+        <div class="form-group">
+            <input type="file" id="file-addpage" multiple>
+            <p class="help-block">可一次上传多张，第一张图会作为封面上传</p>
+        </div>
 
         <label>选择分类</label>
         <select class="form-control">
@@ -76,7 +82,7 @@
     </form>
 
     <!--修改文章的模板-->
-    <form role="form" id="editPage" style="display: none;padding:20px;">
+    <form role="form" id="editPage" class="dialog" style="display: none;padding:20px;">
         <div class="form-group">
             <label for="ptitle">文章标题</label>
             <input type="text" class="form-control title" id="ptitle" placeholder="输入文章的标题">
@@ -84,6 +90,20 @@
 
         <label>文章内容</label>
         <textarea class="form-control content" rows="3"></textarea>
+
+        <label>图片上传</label>
+        <div class="form-group">
+            <input type="file" id="file-editpage" multiple>
+            <p class="help-block">选择上传后，会覆盖之前上传的图片</p>
+        </div>
+
+        <label>选择分类</label>
+        <select class="form-control">
+            <option value="1">笔记本</option>
+            <option value="2">台式机</option>
+            <option value="3">系统</option>
+            <option value="4">硬件</option>
+        </select>
     </form>
 
 

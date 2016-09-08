@@ -234,14 +234,14 @@ input[type="number"] {
 .control .btn-control > * {
   float: none;
 }
-.addPage {
+.dialog {
   margin: 0 auto;
 }
-.addPage textarea {
-  height: 300px;
+.dialog textarea {
+  height: 200px;
   margin-bottom: 20px;
 }
-.addPage select {
+.dialog select {
   margin-bottom: 20px;
 }
 .details .swiper-container {
