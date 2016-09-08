@@ -9,9 +9,6 @@ input::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-.bg-gray {
-  background-color: #f5f5f5;
-}
 .con {
   width: 1200px;
   margin: 0 auto;
@@ -25,6 +22,25 @@ input[type="number"] {
 }
 .header {
   margin: 0;
+}
+.page {
+  height: 34px;
+  margin: 10px 0;
+}
+.page > * {
+  float: left;
+  margin: 0;
+  line-height: 34px;
+}
+.page .input-group {
+  display: inline-block;
+  width: 700px;
+}
+.page .input-group input {
+  width: 70px;
+}
+.page .page-info {
+  padding: 0 10px;
 }
 .login-page {
   width: 100%;
@@ -154,25 +170,6 @@ input[type="number"] {
   .product .item .img {
     width: 330px;
   }
-}
-.talk .page {
-  height: 34px;
-  margin: 10px 0;
-}
-.talk .page > * {
-  float: left;
-  margin: 0;
-  line-height: 34px;
-}
-.talk .page .input-group {
-  display: inline-block;
-  width: 700px;
-}
-.talk .page .input-group input {
-  width: 70px;
-}
-.talk .page .page-info {
-  padding: 0 10px;
 }
 .talk .talk-1 {
   width: 100%;

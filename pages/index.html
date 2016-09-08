@@ -55,17 +55,17 @@
                 </li>
                 <li class="n2">
                     <a href="./details/01.html" target="_blank">
-                    <img src="../images/n2.jpg" alt="">
+                        <img src="../images/n2.jpg" alt="">
                     </a>
                 </li>
                 <li class="n3">
                     <a href="./details/01.html" target="_blank">
-                    <img src="../images/n3.jpg" alt="">
+                        <img src="../images/n3.jpg" alt="">
                     </a>
                 </li>
                 <li class="n4">
                     <a href="./details/01.html" target="_blank">
-                    <img src="../images/n4.jpg" alt="">
+                        <img src="../images/n4.jpg" alt="">
                     </a>
                 </li>
             </ul>
@@ -89,6 +89,32 @@
                 <div role="tabpanel" class="row tab-pane" id="tab-3"></div>
                 <div role="tabpanel" class="row tab-pane" id="tab-4"></div>
             </div>
+
+            <!--分页-->
+            <nav class="page">
+
+                <!--页码后台动态生成-->
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+
+                <!--页统计信息后台动态生成-->
+                <label class="page-info"> 共 <i>2</i> 页</label>
+
+                <div class="input-group">
+                    <input type="number" class="form-control" placeholder="跳转页">
+                    <span class="input-group-btn">
+                <button class="btn btn-default" type="button" >Go!</button>
+                 </span>
+                </div>
+
+            </nav>
         </div>
 
         <div id="tpl-product" style="display: none;">
