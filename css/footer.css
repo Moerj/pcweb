@@ -14,7 +14,7 @@ html{
 }
 body{
 	width: 1078px;
-	height: 481px;
+	height: 350px;
 	margin: 0 auto;
 	padding-top: 70px;
 	padding-left: 22px;
@@ -35,15 +35,26 @@ ul>li{
 	float: left;
 	margin-right: 70px
 }
+.tocenter{
+	width: 1000px;
+	display: block;
+	margin: 0 auto;
+}
+.address{
+	float: left;
+	line-height: 2;
+}
 .icp{
 	position: absolute;
-	bottom: 81px;
-	left:23px;
+	width: 100%;
+	text-align: center;
+	bottom: 110px;
+	left: 0;
 }
 .box{
 	width: 365px;
 	height: 432px;
-	float: right;
+	float: left;
 
 }
 .box h4{
