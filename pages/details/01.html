@@ -1,77 +1,254 @@
 <!doctype html>
 <html lang="zh">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="renderer" content="webkit">
-	<meta http-equiv="X-UA-compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width" initial-scale="1">
-	<title>详细页</title>
-	<link rel="stylesheet" type="text/css" href="../../css/news.css">
-	<script src="../../lib/jquery.min.js"></script>
-	<!--<script src="../../lib/zyComment.js"></script>-->
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width" initial-scale="1">
+        <title>详细页</title>
+        <link rel="stylesheet" href="../../lib/bootstrap.min.css">
+        <link rel="stylesheet" href="../../lib/swiper-3.3.1.min.css">
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/news.css">
+    </head>
 
-<body>
+    <body class="details">
 
-	<h3>详情展示</h3>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#tab-jieshao" role="tab" data-toggle="tab">介绍</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab-canshu" role="tab" data-toggle="tab">参数</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab-qingdan" role="tab" data-toggle="tab">包装清单</a>
+            </li>
+        </ul>
 
-	<!-- 新闻内容部分 -->
-	<div class="newscon">
-		<div class="con-width white">
-			<div class="newsBox">
-				<p class="title">华为G9青春版试用</p>
-				<p class="author">作者：admin 发布：2013-04-15 22:27</p>
-				<img src="../../images/demo.jpg" alt="">
-				<div class="diver"></div>
-				<div class="contant">
-					<p>
-						华为 G9青春版国内正式发布。配备5.2英寸显示屏，具有1980x1080全高清分辨率，采用Sony IMX214后置1300万+前置800万像素摄像头，运营商定制版采用华为麒麟650芯片，全网通版为高通MSM8952芯片，配置3GB RAM内存，机身存储空间为16GB，支持128GB micro SD卡扩展存储，搭载3000mAh电池，续航十分出色，重度用户使用时间仍能达到1.3天。
-					</p><br>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="row tab-pane active" id="tab-jieshao">
+                <!-- 新闻内容部分 -->
+                <div class="newscon">
+                    <div class="con-width white">
+                        <div class="newsBox">
+                            <p class="title">华为G9青春版试用</p>
+                            <p class="author">作者：admin 发布：2013-04-15 22:27</p>
+                            <img id="detail-banner-active" src="../../images/demo4.jpg" alt="">
+                            <div id="details-banner" class="swiper-container">
+                                <div class="imgbox">
+                                    <img src="../../images/demo4.jpg" alt="">
+                                </div>
+                                <div class="imgbox">
+                                    <img src="../../images/demo5.jpg" alt="">
+                                </div>
+                                <div class="imgbox">
+                                    <img src="../../images/demo6.jpg" alt="">
+                                </div>
+                                <div class="imgbox">
+                                    <img src="../../images/demo7.jpg" alt="">
+                                </div>
+                                <div class="imgbox">
+                                    <img src="../../images/demo8.jpg" alt="">
+                                </div>
 
-					<p>
+                            </div>
+                            <div class="diver"></div>
+                            <div class="contant">
+                                <p>
+                                    华为 G9青春版国内正式发布。配备5.2英寸显示屏，具有1980x1080全高清分辨率，采用Sony IMX214后置1300万+前置800万像素摄像头，运营商定制版采用华为麒麟650芯片，全网通版为高通MSM8952芯片，配置3GB RAM内存，机身存储空间为16GB，支持128GB micro SD卡扩展存储，搭载3000mAh电池，续航十分出色，重度用户使用时间仍能达到1.3天。
+                                </p><br>
 
-						我们立志于让我们的企业成为受世人尊敬的企业，竭尽全力的服务于社会，更多地帮助那些需要我们的人，为国家、为社会创造更多的社会效益和经济效益。
-					</p><br>
+                                <p>
 
-					<p>
-						我们的企业诚实、善良、创新、严谨、勇于承担责任，我们作为企业的员工，就必须首先具备这样的品格。
-					</p><br>
+                                    我们立志于让我们的企业成为受世人尊敬的企业，竭尽全力的服务于社会，更多地帮助那些需要我们的人，为国家、为社会创造更多的社会效益和经济效益。
+                                </p><br>
 
-					<p>
-						我们要使我们的企业成为优秀的企业，再实现从优秀到卓越，那么我们应该也必须使自己成为一名优秀员工。
-					</p><br>
+                                <p>
+                                    我们的企业诚实、善良、创新、严谨、勇于承担责任，我们作为企业的员工，就必须首先具备这样的品格。
+                                </p><br>
 
-					<p>
-						我们今天每一分钟的工作，都是为了企业在未来五年、十年的长足发展和不断壮大，工作的意义和价值一定会通过企业的成长而使您个人的人生目标得以实现。如果我们现在要蹉跎岁月，那么当您白发苍苍回味一生时，留下的远远不仅是遗憾。
-					</p><br>
+                                <p>
+                                    我们要使我们的企业成为优秀的企业，再实现从优秀到卓越，那么我们应该也必须使自己成为一名优秀员工。
+                                </p><br>
+
+                                <p>
+                                    我们今天每一分钟的工作，都是为了企业在未来五年、十年的长足发展和不断壮大，工作的意义和价值一定会通过企业的成长而使您个人的人生目标得以实现。如果我们现在要蹉跎岁月，那么当您白发苍苍回味一生时，留下的远远不仅是遗憾。
+                                </p><br>
+                            </div>
+                            <div class="shareBox">
+                                <!-- JiaThis Button BEGIN -->
+                                <div class="jiathis_style">
+                                    <span class="jiathis_txt">分享到：</span>
+                                    <a class="jiathis_button_tools_1"></a>
+                                    <a class="jiathis_button_tools_2"></a>
+                                    <a class="jiathis_button_tools_3"></a>
+                                    <a class="jiathis_button_tools_4"></a>
+                                    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+                                    <a class="jiathis_counter_style"></a>
+                                </div>
+                                <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                                <!-- JiaThis Button END -->
+                            </div>
+
+                            <div class="diver"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div role="tabpanel" class="row tab-pane" id="tab-canshu">
+				<div class="container">
+					<table class="table table-bordered">
+	                    <caption>详细参数以最新型号为准</caption>
+	                    <tbody>
+							<tr class="main">
+								<td colspan="2">
+									主体
+								</td>
+							</tr>
+	                        <tr>
+	                            <td class="key">品牌</td>
+	                            <td class="value">AOC</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">型号</td>
+	                            <td class="value">Jacob</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">颜色</td>
+	                            <td class="value">Larry</td>
+	                        </tr>
+							<tr class="main">
+								<td colspan="2">
+									显示
+								</td>
+							</tr>
+	                        <tr>
+	                            <td class="key">面板尺寸</td>
+	                            <td class="value">23.6英寸</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">宽屏</td>
+	                            <td class="value">是</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">屏幕比例饿</td>
+	                            <td class="value">16:9</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">响应时间</td>
+	                            <td class="value">8ms</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">最佳分辨率</td>
+	                            <td class="value">1920x1080</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">点距</td>
+	                            <td class="value">0.2715(H)mmx0.2715(V)mm</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">色度</td>
+	                            <td class="value">16.7M</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">亮度</td>
+	                            <td class="value">250 cd/m?</td>
+	                        </tr>
+							<tr class="main">
+								<td colspan="2">
+									接口
+								</td>
+							</tr>
+	                        <tr>
+	                            <td class="key">VGA</td>
+	                            <td class="value">1个</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">DVI</td>
+	                            <td class="value">1个</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">HDMI</td>
+	                            <td class="value">0个</td>
+	                        </tr>
+							<tr class="main">
+								<td colspan="2">
+									规格
+								</td>
+							</tr>
+	                        <tr>
+	                            <td class="key">电源</td>
+	                            <td class="value">100-240VAC, 50/60Hz, 1.5A</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">尺寸</td>
+	                            <td class="value">551.4(W)x400.4(H)x221.0(D)mm</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">重量</td>
+	                            <td class="value">3.41kg</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">挂壁规格</td>
+	                            <td class="value">100x100mm</td>
+	                        </tr>
+							<tr class="main">
+								<td colspan="2">
+									特性
+								</td>
+							</tr>
+	                        <tr>
+	                            <td class="key">特性</td>
+	                            <td class="value">净蓝屏系列，爱护您的双眼！</td>
+	                        </tr>
+	                    </tbody>
+	                </table>
 				</div>
-				<div class="shareBox">
-					<!-- JiaThis Button BEGIN -->
-					<div class="jiathis_style">
-						<span class="jiathis_txt">分享到：</span>
-						<a class="jiathis_button_tools_1"></a>
-						<a class="jiathis_button_tools_2"></a>
-						<a class="jiathis_button_tools_3"></a>
-						<a class="jiathis_button_tools_4"></a>
-						<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
-						<a class="jiathis_counter_style"></a>
-					</div>
-					<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-					<!-- JiaThis Button END -->
+
+            </div>
+            <div role="tabpanel" class="row tab-pane" id="tab-qingdan">
+				<div class="container">
+
+					<table class="table table-bordered">
+	                    <caption>以下为实物清单</caption>
+	                    <tbody>
+	                        <tr>
+	                            <td class="key">显示器</td>
+	                            <td class="value">1</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">电源线</td>
+	                            <td class="value">1</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">底座</td>
+	                            <td class="value">1</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">DVI线</td>
+	                            <td class="value">1</td>
+	                        </tr>
+	                        <tr>
+	                            <td class="key">说明书</td>
+	                            <td class="value">1</td>
+	                        </tr>
+	                    </tbody>
+	                </table>
 				</div>
+            </div>
+        </div>
 
+    </body>
 
-				<div class="diver"></div>
-
-			</div>
-		</div>
-	</div>
-
-</body>
-
-<script>
-</script>
-
+    <script src="../../lib/jquery.min.js"></script>
+    <script src="../../lib/bootstrap.min.js"></script>
+    <script src="../../lib/swiper-3.3.1.jquery.min.js"></script>
+    <script src="../../js/details.js"></script>
 
 </html>

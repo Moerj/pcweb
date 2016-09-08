@@ -1,21 +1,25 @@
-html,
-body {
+body,
+html {
     height: 100%;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
-input[type="number"]{
-      -moz-appearance: textfield;
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 .hover-animate () {
     overflow: hidden;
+
     img {
         width: 100%;
         height: 100%;
-        transition: .5s;
+        transition: 0.5s;
+
         &:hover {
             transform: scale3d(1.3, 1.3, 1);
         }
@@ -29,6 +33,7 @@ input[type="number"]{
 .con {
     width: 1200px;
     margin: 0 auto;
+
     .con-title {
         background: #ddd;
         padding: 20px 10px;
@@ -41,29 +46,33 @@ input[type="number"]{
 .header {
     margin: 0;
 }
-
 // 登录和注册
+
 .login-page {
     width: 100%;
     height: 100%;
     background: url('../images/bg2.jpg') no-repeat;
     background-size: cover;
+
     .box {
         width: 300px;
         margin: 0 auto;
         padding-top: 200px;
+
         .form-group {
             position: relative;
         }
     }
+
     .fbtn {
         float: right;
-        padding: 2px;
-        padding-top: 5px;
+        padding: 5px 2px 2px;
     }
+
     .short {
         width: 70%;
     }
+
     .code {
         width: 75px;
         height: 34px;
@@ -72,59 +81,73 @@ input[type="number"]{
         bottom: 0;
     }
 }
-
 // 产品
+
 .product {
     // 热门
     .hot {
         height: 550px;
+
         .pintu {
             margin: 0 30px;
         }
-        a{
+
+        a {
             display: inline-block;
         }
-        ul,
-        li {
+
+        li,
+        ul {
             list-style: none;
         }
+
         ul {
             position: relative;
         }
+
         li {
             position: absolute;
             .hover-animate;
         }
+
         .n1 {
             top: 0;
             left: 0;
         }
+
         .n2 {
             top: 0;
             left: 560px;
         }
+
         .n3 {
             top: 225px;
             left: 560px;
         }
+
         .n4 {
             top: 225px;
             left: 840px;
         }
     }
+
     .tabs {
         padding: 20px;
     }
+
     .swiper-container {
         width: 100%;
         max-height: 800px;
+
         img {
             width: 100%;
         }
     }
+
     .tab-pane {
         padding-top: 20px;
     }
+
     .item {
         overflow: hidden;
         display: inline-block;
@@ -132,19 +155,23 @@ input[type="number"]{
         padding: 0;
         margin-bottom: 10px;
         color: #555;
-        transition: .5s;
+        transition: 0.5s;
+
         &:hover {
             text-decoration: none;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
         }
-        .title,
-        .content {
+
+        .content,
+        .title {
             padding: 5px;
             margin: 0;
         }
+
         .content {
             color: #999;
         }
+
         .img {
             cursor: pointer;
             width: 260px;
@@ -157,47 +184,55 @@ input[type="number"]{
         }
     }
 }
-
 // 贴吧
+
 .talk {
     .page {
         height: 34px;
         margin: 10px 0;
-        &>* {
+
+        & > * {
             float: left;
             margin: 0;
             line-height: 34px;
         }
+
         .input-group {
             display: inline-block;
             width: 700px;
+
             input {
                 width: 70px;
             }
         }
+
         .page-info {
             padding: 0 10px;
         }
     }
+
     .talk-1 {
         width: 100%;
+
         .head {
             display: block;
-            margin: 0 auto;
-            margin-bottom: 10px;
+            margin: 0 auto 10px;
             width: 80px;
             height: 80px;
             border: 1px solid #ddd;
+
             img {
                 width: 100%;
                 height: 100%;
             }
         }
+
         .name {
             display: block;
             margin: 0 auto;
             text-align: center;
         }
+
         .left {
             position: absolute;
             top: 20px;
@@ -205,12 +240,14 @@ input[type="number"]{
             width: 10%;
             height: 100%;
         }
+
         .right {
             width: 100%;
             white-space: pre-line;
             display: inline-block;
             padding-left: 10%;
         }
+
         .list {
             position: relative;
             min-height: 150px;
@@ -218,13 +255,16 @@ input[type="number"]{
             border-left: 0;
             border-right: 0;
             padding-bottom: 20px;
+
             &:last-of-type {
                 border: 0;
             }
         }
     }
+
     .talk-2 {
         width: 100%;
+
         textarea {
             width: 100%;
             height: 220px;
@@ -233,14 +273,15 @@ input[type="number"]{
         }
     }
 }
-
 // 后台管理
+
 .control {
     .btn-control {
         display: block;
         padding: 10px;
         text-align: right;
-        >* {
+
+        > * {
             float: none;
         }
     }
@@ -248,11 +289,49 @@ input[type="number"]{
 
 .addPage {
     margin: 0 auto;
+
     textarea {
         height: 300px;
         margin-bottom: 20px;
     }
+
     select {
         margin-bottom: 20px;
+    }
+}
+
+.details {
+    .swiper-container {
+        width: 100%;
+        max-height: 200px;
+
+        .imgbox {
+            width: 20%;
+            float: left;
+            cursor: pointer;
+            .hover-animate;
+
+            img {
+                width: 100%;
+                font-size: 0;
+            }
+        }
+    }
+
+    .table {
+        // width: 600px;
+
+        .main {
+            td {
+                text-align: center;
+                background: #ebf5fd;
+            }
+        }
+
+        .key {
+            width: 150px;
+        }
+
+        .value {}
     }
 }

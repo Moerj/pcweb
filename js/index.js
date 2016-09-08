@@ -5,8 +5,9 @@ $(function () {
         $('body').css({ overflow: 'hidden' })
         layer.open({
             type: 2,
-            area: ['100%', '100%'],
+            area: ['80%', '90%'],
             fix: true,
+            title: '产品详情',
             maxmin: true,
             content: url,
             end: function () {
@@ -29,11 +30,11 @@ $(function () {
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
 
-            // 自动切换的时间间隔，毫秒
-            autoplay : 5000,
-
             // 如果需要滚动条
             // scrollbar: '.swiper-scrollbar',
+
+            // 自动切换的时间间隔，毫秒
+            autoplay : 5000
         })
     }
 
