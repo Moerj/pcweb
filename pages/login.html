@@ -23,15 +23,15 @@
                     <form role="form">
                         <div class="form-group">
                             <label for="username">用户名</label>
-                            <input type="email" class="form-control" id="username" placeholder="输入邮箱" />
+                            <input type="email" class="form-control" id="login-username" placeholder="输入邮箱" />
                         </div>
                         <div class="form-group">
                             <label for="password">密码</label>
-                            <input type="password" class="form-control" id="password" placeholder="4-12位字符或数字" />
+                            <input type="password" class="form-control" id="login-password" placeholder="4-12位字符或数字" />
                         </div>
                         <div class="form-group">
                             <label for="password">验证码</label>
-                            <input type="password" class="form-control short" id="register-repassword" placeholder="" />
+                            <input type="password" class="form-control short" id="login-code" placeholder="" />
                             <img src="../images/code.jpg" alt="验证码" class="code" />
                         </div>
                         <button id="btn-login" type="button" class="btn btn-block btn-primary">登录</button>
@@ -54,7 +54,7 @@
                         </div>
                         <div class="form-group">
                             <label for="password">验证码</label>
-                            <input type="password" class="form-control short" id="register-repassword" placeholder="" />
+                            <input type="password" class="form-control short" id="register-code" placeholder="" />
                             <img src="../images/code.jpg" alt="验证码" class="code" />
                         </div>
                         <button id="btn-register" type="button" class="btn btn-block btn-primary">注册</button>
@@ -68,19 +68,8 @@
 
     <script src="../lib/jquery.min.js"></script>
     <script src="../lib/jQloader.js"></script>
-
-    <script>
-        (function() {
-            $('#to-register').click(function() {
-                $('.login').hide();
-                $('.register').show();
-            })
-            $('#to-login').click(function() {
-                $('.login').show();
-                $('.register').hide();
-            })
-        })()
-    </script>
+    <script src="../js/login.js"></script>
+    
 
 </body>
 
