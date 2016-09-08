@@ -1,19 +1,4 @@
 $(function(){
-    // 绑定跳转的详情页
-    function bindDetails(url) {
-        $('body').css({ overflow: 'hidden' })
-        layer.open({
-            type: 2,
-            area: ['80%', '90%'],
-            fix: true,
-            title: '产品详情',
-            maxmin: true,
-            content: url,
-            end: function () {
-                $('body').css({ overflow: 'auto' })
-            }
-        });
-    }
 
      // 获取产品列表数据
     var $tpl = $('#tpl-doyouknow');

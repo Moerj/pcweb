@@ -28,21 +28,4 @@
     <!-- /.container-fluid -->
 </nav>
 
-<script>
-    $(function() {
-        // 根据url设置导航的选中状态
-        var pageName = window.location.pathname.split('/')
-        var currUrl = pageName[pageName.length - 1]
-        var navlist = $('#headlist').find('a')
-        $.each(navlist, function(index, a) {
-            var $li = $(a).parent()
-            var url = a.href.split('/')
-            url = url[url.length-1]
-            if(url==currUrl){
-                $li.addClass('active')
-            }else{
-                $li.removeClass('active')
-            }
-        })
-    })
-</script>
+<script src="../js/header.js"></script>
