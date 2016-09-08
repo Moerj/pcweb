@@ -12,6 +12,7 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+
 .hover-animate () {
     overflow: hidden;
 
@@ -211,6 +212,10 @@ input[type="number"] {
     .talk-1 {
         width: 100%;
 
+        .panel-body{
+            padding: 0;
+        }
+
         .head {
             display: block;
             margin: 0 auto 10px;
@@ -243,6 +248,19 @@ input[type="number"] {
             white-space: pre-line;
             display: inline-block;
             padding-left: 10%;
+            margin-bottom: 20px;
+        }
+
+        .reply{
+            padding-right: 20px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            >*{
+                float: right;
+                text-decoration: none;
+                padding: 10px;
+            }
         }
 
         .list {
@@ -269,6 +287,14 @@ input[type="number"] {
             margin-bottom: 10px;
         }
     }
+
+    .dialog-reply{
+        textarea{
+                width:550px;
+                height: 200px;
+            }
+    }
+
 }
 
 

@@ -38,6 +38,9 @@
                     <div class="right">
                         这是评论的内容，啦啦啦啊。啦啦啦 啊啊啊 这是评论的内容，啦啦啦啊。啦啦啦 啊啊啊 这是评论的内容，啦啦啦啊。啦啦啦 啊啊啊 这是评论的内容，啦啦啦啊。啦啦啦 啊啊啊 这是评论的内容，啦啦啦啊。啦啦啦 啊啊啊 这是评论的内容，啦啦啦啊。啦啦啦 啊啊啊这是评论的内容，啦啦啦啊。啦啦啦 啊啊啊这是评论的内容，啦啦啦啊。啦啦啦 啊啊啊这是评论的内容，啦啦啦啊。啦啦啦 啊啊啊这是评论的内容，啦啦啦啊。啦啦啦 啊啊啊
                     </div>
+                    <div class="reply">
+                        <a href="javascript:;">回复</a>
+                    </div>
                 </div>
                 <div class="list">
                     <!--用户信息-->
@@ -50,6 +53,9 @@
                     <!--评论内容-->
                     <div class="right">
                         这是评论的内容，
+                    </div>
+                    <div class="reply">
+                        <a href="javascript:;">回复</a>
                     </div>
                 </div>
             </div>
@@ -92,6 +98,11 @@
             </div>
         </div>
 
+        <!--回复评论，弹出层内容-->
+        <div id="dialog-reply" class="dialog-reply container" style="display: none;">
+            <textarea rows="3"></textarea>
+        </div>
+
         
 
     </form>
@@ -102,6 +113,9 @@
     <script src="../lib/bootstrap.min.js"></script>
     <script src="../lib/layer/layer.js"></script>
     <script src="../lib/jQloader.js"></script>
+
+    <script src="../js/talkbar.js"></script>
+    
     
 </body>
 
