@@ -36,15 +36,15 @@
 
     // 表单界面切换
     $('#to-register').click(function () {
-        $('.box').hide();
+        $('.login-page .box').hide();
         $('.register').show();
     })
     $('.to-login').click(function () {
-        $('.box').hide();
+        $('.login-page .box').hide();
         $('.login').show();
     })
     $('#to-forget').click(function () {
-        $('.box').hide();
+        $('.login-page .box').hide();
         $('.changePwd').show();
     })
 
