@@ -5,7 +5,7 @@ $(function(){
 
     $.ajax({
         type: "get",
-        url: "../json/doyouknow.json",
+        url: "./json/doyouknow.json",
         success: function (data) {
             // 成功后展示产品列表
             var tabPanes = $('.tab-content .tab-pane')

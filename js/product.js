@@ -48,7 +48,7 @@ $(function () {
 
     $.ajax({
         type: "get",
-        url: "../json/product.json",
+        url: "./json/product.json",
         success: function (data) {
             // 成功后展示产品列表
             var tabPanes = [
