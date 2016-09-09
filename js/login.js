@@ -97,4 +97,25 @@
         }
         $registerBtn.attr({ disabled: invaild }).text(msg)
     })
+
+    // 获取验证码按钮冷却时间
+    var cooling = 60
+    $('.btn-getmsg').click(function(){
+        var _this = $(this)
+        var text = _this.text()
+        var total = cooling
+        _this.prop('disabled',true)
+        var timer = setInterval(function(){
+            if(cooling<=0){
+                _this.prop('disabled',false)
+                _this.text(text)
+                clearInterval(timer)
+                cooling = total
+                return
+            }
+            _this.text('喝杯茶 '+cooling+'s')
+            cooling--
+        },1000)
+            
+    })
 })()
