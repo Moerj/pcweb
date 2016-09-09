@@ -23,6 +23,9 @@ input[type="number"] {
 .header {
   margin: 0;
 }
+.header a {
+  cursor: pointer;
+}
 .tab-pane {
   padding-top: 20px;
 }
@@ -122,6 +125,21 @@ input[type="number"] {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+.login-page .form-group {
+  position: relative;
+}
+.login-page .togglePwd {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #999;
+  padding: 0 2px;
+}
+.login-page .togglePwd:hover {
+  color: #555;
 }
 .product .hot {
   height: 550px;

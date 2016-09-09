@@ -1,5 +1,4 @@
 <!--产品展示列表页面-->
-
 <div class="product">
 
     <div class="swiper-container">
@@ -25,7 +24,35 @@
         <div class="swiper-scrollbar"></div>
     </div>
 
+    <!--热门推荐-->
+    <div class="hot con">
+        <h3 class="con-title">热门推荐</h3>
+        <ul class="pintu">
+            <li class="n1">
+                <a href="./pages/details/01.html" target="_blank">
+                    <img src="../images/n1.jpg" alt="">
+                </a>
+            </li>
+            <li class="n2">
+                <a href="./pages/details/01.html" target="_blank">
+                    <img src="../images/n2.jpg" alt="">
+                </a>
+            </li>
+            <li class="n3">
+                <a href="./pages/details/01.html" target="_blank">
+                    <img src="../images/n3.jpg" alt="">
+                </a>
+            </li>
+            <li class="n4">
+                <a href="./pages/details/01.html" target="_blank">
+                    <img src="../images/n4.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <div class="tabs con">
+        <h3 class="con-title">机型选购</h3>
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
@@ -42,11 +69,37 @@
             <div role="tabpanel" class="row tab-pane" id="tab-3"></div>
             <div role="tabpanel" class="row tab-pane" id="tab-4"></div>
         </div>
+
+        <!--分页-->
+        <nav class="page">
+
+            <!--页码后台动态生成-->
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+
+            <!--页统计信息后台动态生成-->
+            <label class="page-info"> 共 <i>2</i> 页</label>
+
+            <div class="input-group">
+                <input type="number" class="form-control" placeholder="跳转页">
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="button" >Go!</button>
+                 </span>
+            </div>
+
+        </nav>
     </div>
 
     <div id="tpl-product" style="display: none;">
         <div class="col-md-3">
-            <a class="item" href="#">
+            <a class="item" href="./pages/details/01.html">
                 <div class="img">
                     <img src="../images/demo.jpg">
                 </div>
@@ -58,21 +111,4 @@
 
 </div>
 
-<script>
-    // 初始化轮播图
-    new Swiper('.swiper-container', {
-        // direction: 'vertical',
-        loop: true,
-
-        // 如果需要分页器
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-
-        // 如果需要前进后退按钮
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-
-        // 如果需要滚动条
-        // scrollbar: '.swiper-scrollbar',
-    })
-</script>
+<script src="../js/product.js"></script>

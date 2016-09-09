@@ -38,6 +38,9 @@ input[type="number"] {
 
 .header {
     margin: 0;
+    a{
+        cursor: pointer;
+    }
 }
 
 .tab-pane {
@@ -134,6 +137,21 @@ input[type="number"] {
         position: absolute;
         right: 0;
         bottom: 0;
+    }
+    .form-group{
+        position: relative;
+    }
+    .togglePwd{
+        position: absolute;
+        right: 10px;
+        bottom: 8px;
+        font-size: 12px;
+        cursor: pointer;
+        color:#999;
+        padding: 0 2px;
+        &:hover{
+            color:#555;
+        }
     }
 }
 

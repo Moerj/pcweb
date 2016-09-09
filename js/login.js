@@ -9,6 +9,26 @@
     var $registerRepassword = $('#register-repassword')
     var $registerCode = $('#register-code')
 
+    // 显示/隐藏密码功能
+    function togglePwd($input) {
+        var container = $input.parents('.form-group:first')
+        var $toggle = $('<span class="togglePwd"><i class="fa fa-eye" title="显示/隐藏"></i></span>')
+        container.append($toggle);
+        $toggle.click(function () {
+            $(this).find('i').toggleClass('fa-eye-slash')
+            if ($input.attr('type') === 'password') {
+                $input.attr('type', 'text')
+            } else {
+                $input.attr('type', 'password')
+            }
+        })
+
+    }
+    togglePwd($loginPassword)
+    togglePwd($registerPassword)
+    togglePwd($registerRepassword)
+
+    // 注册、登录表单界面切换
     $('#to-register').click(function () {
         $('.login').hide();
         $('.register').show();
@@ -27,13 +47,13 @@
             invaild = true
             msg = '请输入用户名'
         }
-        else if ($loginPassword.val()=='') {
+        else if ($loginPassword.val() == '') {
             invaild = true
             msg = '请输入密码'
         }
         else if ($loginPassword.val().length < 4 || $loginPassword.val().length > 12) {
             invaild = true
-            msg = '密码需是：'+$loginPassword.attr('placeholder')
+            msg = '密码需是：' + $loginPassword.attr('placeholder')
         }
         else if ($loginCode.val() == '') {
             invaild = true
@@ -56,13 +76,13 @@
             invaild = true
             msg = '请输入用户名'
         }
-        else if ($registerPassword.val()=='') {
+        else if ($registerPassword.val() == '') {
             invaild = true
             msg = '请输入密码'
         }
         else if ($registerPassword.val().length < 4 || $registerPassword.val().length > 12) {
             invaild = true
-            msg = '密码需是：'+$registerPassword.attr('placeholder')
+            msg = '密码需是：' + $registerPassword.attr('placeholder')
         }
         else if ($registerRepassword.val() != $registerPassword.val()) {
             invaild = true
