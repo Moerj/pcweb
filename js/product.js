@@ -1,5 +1,5 @@
 $(function () {
-
+    var $win = $(window)
     // 初始化，首页加载产品页
 
     // 初始化轮播图
@@ -21,6 +21,18 @@ $(function () {
 
             // 自动切换的时间间隔，毫秒
             autoplay: 5000
+        })
+        // 设置轮播图为当前窗口尺寸
+        var headerHeight = $('.header').height();
+        $('#product-banner').height($win.height()-headerHeight);
+        var resizeing = false;
+        $win.on('resize', function () {
+            if (!resizeing) {
+                $('#product-banner').height($win.height()-headerHeight)
+                setTimeout(function () {
+                    resizeing = true;
+                },500)
+            }
         })
     }
 
