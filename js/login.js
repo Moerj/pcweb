@@ -33,6 +33,9 @@
     togglePwd($loginPassword)
     togglePwd($registerPassword)
     togglePwd($registerRepassword)
+    togglePwd($changeOldPwd)
+    togglePwd($changeNewPwd)
+    togglePwd($changeRepassword)
 
     // 表单界面切换
     $('#to-register').click(function () {
