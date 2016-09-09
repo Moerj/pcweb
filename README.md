@@ -1,6 +1,8 @@
 # pcweb
 电脑商城-电商网站
 
+## DEMO
+https://moerj.github.io/pcweb/
 
 ## 目录结构
 部署必须的目录：
@@ -20,5 +22,4 @@
 - [swiper轮播图组件](http://www.swiper.com.cn/)
 - [jQloader静态模块化加载器](https://moerj.github.io/jQloader/)
 
-## 入口页面
-index.html
+
