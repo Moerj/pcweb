@@ -28,7 +28,7 @@ $(function () {
     $('body').on('click', '.hot a', function (e) {
         e.preventDefault();
         e.stopPropagation();
-        bindDetails($(this).attr('href'));
+        $.bindDetails($(this).attr('href'));
     })
 
     // 获取产品列表数据
@@ -57,7 +57,7 @@ $(function () {
                 newtpl.find('.item').on('click', function (e) {
                     e.preventDefault()
                     e.stopPropagation()
-                    bindDetails($(this).attr('href'))
+                    $.bindDetails($(this).attr('href'))
                 })
                 tabPanes[el.tab].append(newtpl)
                 newtpl.show();

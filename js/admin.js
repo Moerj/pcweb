@@ -2,6 +2,10 @@ $(function () {
     var $editPage = $('#editPage')
     var $addPage = $('#addPage')
 
+    // 限制文章长度
+    $.wordLimit($editPage.find('textarea'), 15000)
+    $.wordLimit($addPage.find('textarea'), 15000)
+
 
     $('body').on('click', '.btn-control .edit', function (e) {
         var listItem = $(e.target).parents('.list-item')
@@ -10,10 +14,12 @@ $(function () {
         var imgSrc = listItem.find('img').attr('src')
 
         // 改变模板数据 
-        $editPage.find('.title').val(title)
+        $editPage.find('.ptitle').val(title)
         $editPage.find('.content').val(content)
         $editPage.find('img').attr({ src: imgSrc })
+        $editPage.find('select').val($(this).parents('.tab-pane').index())
 
+        // 编辑窗
         layer.open({
             type: 1,
             title: '修改',
@@ -25,11 +31,13 @@ $(function () {
             btn: ['保存', '取消'], //按钮
             btn1: function (index, layero) {
                 //按钮【按钮1】的回调
-                console.log('保存');
+                if (layero.find('.ptitle').val() == '') {
+                    layer.msg('标题不能为空');
+                    return false;
+                }
             },
             btn2: function (index, layero) {
                 //按钮【按钮2】的回调
-                console.log('取消');
             }
         });
         return false;
@@ -62,12 +70,21 @@ $(function () {
             skin: 'layui-layer-rim',
             shadeClose: true,
             content: $('#addPage'),
-            btn: ['保存', '取消'] //按钮
+            btn: ['保存', '取消'], //按钮
+            btn1: function (index, layero) {
+                if (layero.find('.ptitle').val() == '') {
+                    layer.msg('标题不能为空');
+                    return false;
+                }
+            },
+            btn2: function (index, layero) {
+                //按钮【按钮2】的回调
+            }
         });
         return false;
     })
 
-     // 获取产品列表数据
+    // 获取产品列表数据
     var $tpl = $('#tpl-product');
 
     $.ajax({
@@ -90,7 +107,7 @@ $(function () {
                 newtpl.find('.title').text(el.title)
                 newtpl.find('.content').text(el.content)
                 newtpl.find('img').attr('src', el.image)
-                newtpl.find('.item').attr('href','javascript:;')
+                newtpl.find('.item').attr('href', 'javascript:;')
                 tabPanes[el.tab].append(newtpl)
                 newtpl.show();
             });

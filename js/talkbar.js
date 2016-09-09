@@ -17,4 +17,11 @@ $(function(){
             }
         });
     })
+
+    // 限制输入字符上限
+
+    // 评论内容
+    $.wordLimit($('#talkbar-textarea-1'), 7000);
+    // 回复内容
+    $.wordLimit($('#talkbar-textarea-2'), 5000);
 })

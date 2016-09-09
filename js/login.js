@@ -11,7 +11,7 @@
 
     // 显示/隐藏密码功能
     function togglePwd($input) {
-        var container = $input.parents('.form-group:first')
+        var container = $input.parent()
         var $toggle = $('<span class="togglePwd"><i class="fa fa-eye" title="显示/隐藏"></i></span>')
         container.append($toggle);
         $toggle.click(function () {
