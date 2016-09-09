@@ -8,6 +8,12 @@
     var $registerPassword = $('#register-password')
     var $registerRepassword = $('#register-repassword')
     var $registerCode = $('#register-code')
+    var $changeBtn = $('#btn-changePwd')
+    var $changeName = $('#changePwd-username')
+    var $changeOldPwd = $('#changePwd-oldpassword')
+    var $changeNewPwd = $('#changePwd-password')
+    var $changeRepassword = $('#changePwd-repassword')
+    var $changeCode = $('#changePwd-code')
 
     // 显示/隐藏密码功能
     function togglePwd($input) {
@@ -28,14 +34,18 @@
     togglePwd($registerPassword)
     togglePwd($registerRepassword)
 
-    // 注册、登录表单界面切换
+    // 表单界面切换
     $('#to-register').click(function () {
-        $('.login').hide();
+        $('.box').hide();
         $('.register').show();
     })
-    $('#to-login').click(function () {
+    $('.to-login').click(function () {
+        $('.box').hide();
         $('.login').show();
-        $('.register').hide();
+    })
+    $('#to-forget').click(function(){
+        $('.box').hide();
+        $('.changePwd').show();
     })
 
     // 登录前端验证
@@ -96,6 +106,41 @@
             msg = '注册'
         }
         $registerBtn.attr({ disabled: invaild }).text(msg)
+    })
+
+    // 修改密码验证
+    $changeBtn.prop('disabled', true)
+    $('.changePwd').on('keyup', 'input', function () {
+        var invaild = false;
+        var msg = ''
+        if ($changeName.val() == '') {
+            invaild = true
+            msg = '请输入用户名'
+        }
+        else if ($changeOldPwd.val() == '') {
+            invaild = true
+            msg = '请输入密码'
+        }
+        else if ($changeOldPwd.val().length < 4 || $changeOldPwd.val().length > 12) {
+            invaild = true
+            msg = '原密码需是：' + $changeOldPwd.attr('placeholder')
+        }
+        else if ($changeNewPwd.val().length < 4 || $changeNewPwd.val().length > 12) {
+            invaild = true
+            msg = '新密码需是：' + $changeNewPwd.attr('placeholder')
+        }
+        else if ($changeRepassword.val() != $changeNewPwd.val()) {
+            invaild = true
+            msg = '新密码两次输入密码不一致'
+        }
+        else if ($changeCode.val() == '') {
+            invaild = true
+            msg = '请输入验证码'
+        }
+        if (msg === '') {
+            msg = '修改密码'
+        }
+        $changeBtn.attr({ disabled: invaild }).text(msg)
     })
 
     // 获取验证码按钮冷却时间
