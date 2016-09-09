@@ -124,6 +124,9 @@ input[type="number"] {
   float: right;
   cursor: pointer;
 }
+.login-page .remember:hover {
+  color: #66afe9;
+}
 .login-page .remember input {
   display: none;
 }

@@ -12,6 +12,8 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+@color-active:#66afe9;
+
 .hover-animate () {
     overflow: hidden;
     img {
@@ -135,15 +137,18 @@ input[type="number"] {
         color: #999;
         float: right;
         cursor: pointer;
+        &:hover{
+            color: @color-active;
+        }
         input {
             display: none;
             &+ i {
                 color: transparent;
             }
             &:checked+ i {
-                color: #66afe9;
+                color: @color-active;
                 &+ span {
-                    color: #66afe9;
+                    color: @color-active;
                 }
             }
         }
@@ -170,7 +175,7 @@ input[type="number"] {
         color: #999;
         padding: 0 2px;
         &:hover {
-            color: #66afe9;
+            color: @color-active;
         }
     }
     .btn-getmsg {
