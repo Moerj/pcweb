@@ -21,4 +21,4 @@
 - [jQloader静态模块化加载器](https://moerj.github.io/jQloader/)
 
 ## 入口页面
-/pages/index.html
+index.html
