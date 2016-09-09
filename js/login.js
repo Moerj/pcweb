@@ -20,13 +20,10 @@
         var container = $input.parent()
         var $toggle = $('<span class="togglePwd"><i class="fa fa-eye" title="显示/隐藏"></i></span>')
         container.append($toggle);
-        $toggle.click(function () {
-            $(this).find('i').toggleClass('fa-eye-slash')
-            if ($input.attr('type') === 'password') {
-                $input.attr('type', 'text')
-            } else {
-                $input.attr('type', 'password')
-            }
+        $toggle.hover(function () {
+            $input.attr('type', 'text')
+        }, function () {
+            $input.attr('type', 'password')
         })
 
     }
@@ -46,7 +43,7 @@
         $('.box').hide();
         $('.login').show();
     })
-    $('#to-forget').click(function(){
+    $('#to-forget').click(function () {
         $('.box').hide();
         $('.changePwd').show();
     })
@@ -148,22 +145,22 @@
 
     // 获取验证码按钮冷却时间
     var cooling = 60
-    $('.btn-getmsg').click(function(){
+    $('.btn-getmsg').click(function () {
         var _this = $(this)
         var text = _this.text()
         var total = cooling
-        _this.prop('disabled',true)
-        var timer = setInterval(function(){
-            if(cooling<=0){
-                _this.prop('disabled',false)
+        _this.prop('disabled', true)
+        var timer = setInterval(function () {
+            if (cooling <= 0) {
+                _this.prop('disabled', false)
                 _this.text(text)
                 clearInterval(timer)
                 cooling = total
                 return
             }
-            _this.text('喝杯茶 '+cooling+'s')
+            _this.text('喝杯茶 ' + cooling + 's')
             cooling--
-        },1000)
-            
+        }, 1000)
+
     })
 })()

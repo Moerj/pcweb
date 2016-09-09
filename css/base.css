@@ -146,7 +146,7 @@ input[type="number"] {
   padding: 0 2px;
 }
 .login-page .togglePwd:hover {
-  color: #555;
+  color: #66afe9;
 }
 .login-page .btn-getmsg {
   position: absolute;
