@@ -123,6 +123,18 @@ input[type="number"] {
   color: #999;
   float: right;
 }
+.login-page .remember input {
+  display: none;
+}
+.login-page .remember input + i {
+  color: transparent;
+}
+.login-page .remember input:checked + i {
+  color: #66afe9;
+}
+.login-page .remember input:checked + i + span {
+  color: #66afe9;
+}
 .login-page .short {
   width: 70%;
 }
